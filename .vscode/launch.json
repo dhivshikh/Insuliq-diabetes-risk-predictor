@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Backend: Python",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/backend"
+        },
+        {
+            "name": "Frontend: npm dev",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "cmd.exe /c npm run dev",
+            "cwd": "${workspaceFolder}/frontend"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run Full Project",
+            "configurations": ["Backend: Python", "Frontend: npm dev"],
+            "stopAll": true
+        }
+    ]
+}
